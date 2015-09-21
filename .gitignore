@@ -1,5 +1,11 @@
 BootStrap.groovy
 
+
+out
+target
+*.iml
+.idea
+
 # Compiled source #
 ###################
 *.com

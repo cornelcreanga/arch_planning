@@ -90,8 +90,13 @@
         <h2>Useful links:</h2>
         <ul>
             <li class="controller"><g:link controller="project">Projects</g:link></li>
-            <li class="controller"><g:link controller="feature">Active features</g:link></li>
-            <li class="controller"><g:link controller="none">Active technical concepts</g:link></li>
+            <li class="controller"><g:link controller="feature">Planned features</g:link></li>
+            <li class="controller"><g:link controller="feature">Work in progress features</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexPlanned">Planned technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc">Active technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc">Security waiting technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc">Closed technical concepts</g:link></li>
+
         </ul>
     </div>
 </div>

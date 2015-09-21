@@ -23,7 +23,9 @@ class Tc {
         endDate(nullable: true)
         review(nullable: true)
     }
-
+    static mapping = {
+        tcStatus(enumType: "string")
+    }
     Tc NOT_NEEDED() { new Tc (name:"Not needed") }
     Tc PLANNED() { new Tc (name:"Planned") }
 

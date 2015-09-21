@@ -15,6 +15,12 @@ class TcController {
         respond Tc.list(params), model:[tcInstanceCount: Tc.count()]
     }
 
+    def indexPlanned(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        println Tc.findByTcStatus(TcStatus.PLANNED)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.PLANNED), tcInstanceCount:Tc.countByTcStatus(TcStatus.PLANNED),filterParams:params])
+    }
+
     def show(Tc tcInstance) {
         respond tcInstance
     }
