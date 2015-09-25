@@ -29,5 +29,8 @@ class Tc {
     Tc NOT_NEEDED() { new Tc (name:"Not needed") }
     Tc PLANNED() { new Tc (name:"Planned") }
 
+    String toString() {
+        name
+    }
 
 }

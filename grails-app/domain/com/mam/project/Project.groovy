@@ -16,7 +16,7 @@ class Project {
         criticalness(nullable:false)
     }
 
-    public String toString() {
+    String toString() {
         name
     }
 }
