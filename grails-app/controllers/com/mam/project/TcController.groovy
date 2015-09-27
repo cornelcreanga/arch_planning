@@ -15,11 +15,36 @@ class TcController {
         respond Tc.list(params), model:[tcInstanceCount: Tc.count()]
     }
 
+    //todo - refactor
     def indexPlanned(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        println Tc.findByTcStatus(TcStatus.PLANNED)
         return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.PLANNED), tcInstanceCount:Tc.countByTcStatus(TcStatus.PLANNED),filterParams:params])
     }
+    def indexStarted(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.STARTED), tcInstanceCount:Tc.countByTcStatus(TcStatus.STARTED),filterParams:params])
+    }
+    def indexApproved(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.APPROVED), tcInstanceCount:Tc.countByTcStatus(TcStatus.APPROVED),filterParams:params])
+    }
+    def indexArchReview(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.ARCHITECT_REVIEW), tcInstanceCount:Tc.countByTcStatus(TcStatus.ARCHITECT_REVIEW),filterParams:params])
+    }
+    def indexFeedbackNeeded(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.FEEDBACK_NEEDED), tcInstanceCount:Tc.countByTcStatus(TcStatus.FEEDBACK_NEEDED),filterParams:params])
+    }
+    def indexSecurityWaiting(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.SECURITY_WAITING), tcInstanceCount:Tc.countByTcStatus(TcStatus.SECURITY_WAITING),filterParams:params])
+    }
+    def indexCancelled(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.CANCELLED), tcInstanceCount:Tc.countByTcStatus(TcStatus.CANCELLED),filterParams:params])
+    }
+
 
     def show(Tc tcInstance) {
         respond tcInstance

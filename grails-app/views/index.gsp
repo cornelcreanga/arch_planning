@@ -93,9 +93,13 @@
             <li class="controller"><g:link controller="feature">Planned features</g:link></li>
             <li class="controller"><g:link controller="feature">Work in progress features</g:link></li>
             <li class="controller"><g:link controller="tc" action="indexPlanned">Planned technical concepts</g:link></li>
-            <li class="controller"><g:link controller="tc">Active technical concepts</g:link></li>
-            <li class="controller"><g:link controller="tc">Security waiting technical concepts</g:link></li>
-            <li class="controller"><g:link controller="tc">Closed technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexStarted">Started technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexApproved">Approved technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexArchReview">Architect review technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexFeedbackNeeded">Feedback needed technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexSecurityWaiting">Security waiting technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexCancelled">Cancelled technical concepts</g:link></li>
+
 
         </ul>
     </div>
