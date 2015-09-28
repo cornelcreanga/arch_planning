@@ -40,9 +40,9 @@ class TcController {
         params.max = Math.min(max ?: 10, 100)
         return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.SECURITY_WAITING), tcInstanceCount:Tc.countByTcStatus(TcStatus.SECURITY_WAITING),filterParams:params])
     }
-    def indexCancelled(Integer max) {
+    def indexCanceled(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.CANCELLED), tcInstanceCount:Tc.countByTcStatus(TcStatus.CANCELLED),filterParams:params])
+        return render(view: "index",model: [tcInstanceList: Tc.findAllByTcStatus(TcStatus.CANCELED), tcInstanceCount:Tc.countByTcStatus(TcStatus.CANCELED),filterParams:params])
     }
 
 

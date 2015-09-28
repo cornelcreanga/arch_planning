@@ -98,7 +98,7 @@
             <li class="controller"><g:link controller="tc" action="indexArchReview">Architect review technical concepts</g:link></li>
             <li class="controller"><g:link controller="tc" action="indexFeedbackNeeded">Feedback needed technical concepts</g:link></li>
             <li class="controller"><g:link controller="tc" action="indexSecurityWaiting">Security waiting technical concepts</g:link></li>
-            <li class="controller"><g:link controller="tc" action="indexCancelled">Cancelled technical concepts</g:link></li>
+            <li class="controller"><g:link controller="tc" action="indexCanceled">Canceled technical concepts</g:link></li>
 
 
         </ul>
