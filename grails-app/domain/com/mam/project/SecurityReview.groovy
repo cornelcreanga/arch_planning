@@ -11,7 +11,7 @@ class SecurityReview {
 
     Date reviewDate
 
-    static hasMany = [notes: Note,reviewers:Employee]
+    static hasMany = [notes: Note,reviewers:Employee,jira:Link]
 
     static constraints = {
         name(nullable:false)
